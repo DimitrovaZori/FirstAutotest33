@@ -17,9 +17,9 @@ public class Main {
                     double monthlyPayment = (double) amount / months;
                     System.out.println("Месечната вноска е равна на" + monthlyPayment);
                 }
-            } else if(amount>50000 && salary < 2000){
+            } else if (amount > 50000 && salary < 2000) {
                 System.out.println("Съжаляваме, но максимума за такъв доход е 20000лева");
-            } else if(amount>50000 && amount<100000 && salary > 2000){
+            } else if (amount > 50000 && amount < 100000 && salary > 2000) {
                 System.out.println("С такъв доход можем да Ви предложим 100 000лева");
                 double interestRate = getInterestRate(amount);
                 double totalAmount = amount + (amount + interestRate + months / 12);
@@ -27,7 +27,7 @@ public class Main {
                 System.out.printf("Месечна вноска за сума от %d лева за сума от %d месеца с лихва " +
                         "%.2f%% е %.2f лева .%n", amount, months, interestRate * 100, monthlyPayment);
 
-                }else{
+            } else {
                 double interestRate = getInterestRate(amount);
                 double totalAmount = amount + (amount + interestRate + months / 12);
                 double monthlyPayment = totalAmount / months;
@@ -50,7 +50,4 @@ public class Main {
     }
 
 
-
-
-
-    }
+}
